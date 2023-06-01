@@ -12,10 +12,10 @@ coverage:
 
 ## build_cli: builds the command line tool swiftgo and copies it to myapp
 build_cli:
-	@go build -o ../myapp/swiftgo ./cmd/cli
+	@go build -o ../myapp/swiftgo.exe ./cmd/cli
 
 ## build: builds the command line tool dist directory
 build:
-	@go build -o ./dist/swiftgo ./cmd/cli
+	@go build -o ./dist/swiftgo.exe ./cmd/cli
 # windows users should delete the line above this one, and use the line below instead (uncommented)
 #@go build -o dist/swiftgo.exe ./cmd/cli

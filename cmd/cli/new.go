@@ -30,8 +30,8 @@ func doNew(appName string) {
 	// git clone the skeleton application
 	color.Green("\tCloning repository...")
 	_, err := git.PlainClone("./"+appName, false, &git.CloneOptions{
-		// URL: "git@github.com:tsawler/celeritas-app.git",
-		URL:      "https://github.com/tsawler/celeritas-app.git",
+		// URL: "git@github.com:Bibisara/swiftgo-app.git",
+		URL:      "https://github.com/Bibisara/swiftgo-app.git",
 		Progress: os.Stdout,
 		Depth:    1,
 	})
@@ -125,7 +125,7 @@ func doNew(appName string) {
 	// run go mod tidy in the project directory
 	color.Yellow("\tRunning go mod tidy...")
 
-	cmd := exec.Command("go", "get", "github.com/tsawler/celeritas")
+	cmd := exec.Command("go", "get", "github.com/Bibisara/swiftgo")
 	err = cmd.Start()
 	if err != nil {
 		exitGracefully(err)

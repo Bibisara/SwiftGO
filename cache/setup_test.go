@@ -21,9 +21,9 @@ func TestMain(m *testing.M) {
 	}
 	defer s.Close()
 
-	pool := redis.Pool {
-		MaxIdle: 50,
-		MaxActive: 1000,
+	pool := redis.Pool{
+		MaxIdle:     50,
+		MaxActive:   1000,
 		IdleTimeout: 240 * time.Second,
 		Dial: func() (redis.Conn, error) {
 			return redis.Dial("tcp", s.Addr())
@@ -31,7 +31,7 @@ func TestMain(m *testing.M) {
 	}
 
 	testRedisCache.Conn = &pool
-	testRedisCache.Prefix = "test-celeritas"
+	testRedisCache.Prefix = "test-swiftgo"
 
 	defer testRedisCache.Conn.Close()
 

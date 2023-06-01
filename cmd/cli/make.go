@@ -19,7 +19,7 @@ func doMake(arg2, arg3, arg4 string) error {
 	case "migration":
 		checkForDB()
 
-		//dbType := cel.DB.DataType
+		//dbType := swi.DB.DataType
 		if arg3 == "" {
 			exitGracefully(errors.New("you must give the migration a name"))
 		}
